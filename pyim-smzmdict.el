@@ -1,4 +1,4 @@
-;;; pyim-smzm.el --- Sanma(triple) Zhengma dict for pyim
+;;; pyim-smzmdict.el --- Sanma(triple) Zhengma dict for pyim
 
 ;; Author: Yue Shi (Zhizhi)
 ;; Maintainer: Yuanchen Xie
@@ -53,7 +53,7 @@
   "Add sanma(triple) zhengma dict to pyim."
   (interactive)
   (let* ((dir (file-name-directory
-               (locate-library "pyim-smzm.el")))
+               (locate-library "pyim-smzmdict.el")))
          (file (concat dir "pyim-smzmdict.pyim")))
     (when (file-exists-p file)
       (if (featurep 'pyim)
