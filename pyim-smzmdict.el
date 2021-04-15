@@ -44,6 +44,7 @@
 ;;    (require 'pyim-smzmdict)
 ;;    (pyim-smzmdict-enable)
 ;;    #+END_EXAMPLE
+;; 3. M-x 之后调用 toggle-input-method 函数，回车开始使用。
 
 ;;; Code:
 ;; * 代码                                                               :code:
