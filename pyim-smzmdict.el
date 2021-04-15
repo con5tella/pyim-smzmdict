@@ -38,7 +38,7 @@
 ;; 本词库中的原始数据由三码郑码的作者至至本人提供，可用于非盈利性的交流、分享与使用。
 
 ;; ** 安装和使用
-;; 1. 下载本词库到 Emacs 可读取的位置；
+;; 1. 下载 pyim 及本词库到 Emacs 可读取的位置；
 ;; 2. 在emacs配置文件中（比如: ~/.emacs）添加如下代码：
 ;;    #+BEGIN_EXAMPLE
 ;;    (require 'pyim-smzmdict)
@@ -47,6 +47,25 @@
 
 ;;; Code:
 ;; * 代码                                                               :code:
+
+(require 'pyim)
+
+(pyim-scheme-add
+ '(smzm
+   :document "三码郑码输入法。"
+   :class xingma
+   :first-chars "abcdefghijklmnopqrstuvwxyz"
+   :rest-chars "abcdefghijklmnopqrstuvwxyz'"
+   :code-prefix "_"
+   :code-split-length 3
+   :code-maximum-length 3
+   :prefer-trigger-chars nil))
+
+(setq default-input-method "pyim"
+      pyim-default-scheme 'smzm
+      pyim-enable-shortcode nil
+      pyim-punctuation-translate-p '(auto yes no)
+      pyim-page-tooltip 'popup)
 
 ;;;###autoload
 (defun pyim-smzmdict-enable ()
