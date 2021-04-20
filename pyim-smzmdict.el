@@ -62,12 +62,6 @@
    :code-maximum-length 3
    :prefer-trigger-chars nil))
 
-(setq default-input-method "pyim"
-      pyim-default-scheme 'smzm
-      pyim-enable-shortcode nil
-      pyim-punctuation-translate-p '(auto yes no)
-      pyim-page-tooltip 'popup)
-
 ;;;###autoload
 (defun pyim-smzmdict-enable ()
   "Add sanma(triple) zhengma dict to pyim."

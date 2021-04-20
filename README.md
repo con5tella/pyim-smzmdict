@@ -29,3 +29,14 @@ Thanks to the scheme author Shi Yue (Zhizhi) for providing free resources.
 (require 'pyim-smzmdict)
 (pyim-smzmdict-enable)
 ```
+
+相应的 pyim 配置可参考以下代码：
+
+``` elisp
+(setq default-input-method "pyim" ; 设置 Emacs 的输入法为 pyim，必选
+      pyim-default-scheme 'smzm   ; 设置 pyim 的输入方案为 smzm，必选
+      ;; 以下设置用户可参考 pyim 的 [README](https://github.com/tumashu/pyim/blob/master/README.md) 进行配置或优化
+      pyim-enable-shortcode nil
+      pyim-punctuation-translate-p '(auto yes no)
+      pyim-page-tooltip 'popup)
+```
