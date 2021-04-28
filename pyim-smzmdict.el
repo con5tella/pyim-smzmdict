@@ -3,7 +3,7 @@
 ;; Author: Yue Shi (Zhizhi)
 ;; Maintainer: Yuanchen Xie
 ;; Version: 0.0.1
-;; Package-Requires: ((pyim "1.0"))
+;; Package-Requires: ((pyim "3.7"))
 ;; Homepage: https://github.com/p1uxtar/pyim-smzmdict
 ;; Keywords: convenience, i18n, pyim, Chinese, zhengma
 
@@ -48,7 +48,6 @@
 
 ;;; Code:
 ;; * 代码                                                               :code:
-
 (require 'pyim)
 
 (pyim-scheme-add
@@ -57,7 +56,7 @@
    :class xingma
    :first-chars "abcdefghijklmnopqrstuvwxyz"
    :rest-chars "abcdefghijklmnopqrstuvwxyz'"
-   :code-prefix "_"
+   :code-prefix "smzm/"
    :code-split-length 3
    :code-maximum-length 3
    :prefer-trigger-chars nil))
