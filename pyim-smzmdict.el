@@ -57,6 +57,7 @@
    :first-chars "abcdefghijklmnopqrstuvwxyz"
    :rest-chars "abcdefghijklmnopqrstuvwxyz'"
    :code-prefix "smzm/"
+   :code-prefix-history ("_")
    :code-split-length 3
    :code-maximum-length 3
    :prefer-trigger-chars nil))
