@@ -48,7 +48,8 @@
 
 ;;; Code:
 ;; * 代码                                                               :code:
-(require 'pyim)
+(require 'pyim-dict)
+(require 'pyim-scheme)
 
 (pyim-scheme-add
  '(smzm
@@ -70,7 +71,7 @@
                (locate-library "pyim-smzmdict.el")))
          (file (concat dir "pyim-smzmdict.pyim")))
     (when (file-exists-p file)
-      (if (featurep 'pyim)
+      (if (featurep 'pyim-dict)
           (pyim-extra-dicts-add-dict
            `(:name "smzmdict-elpa" :file ,file :elpa t))
         (message "pyim 没有安装，pyim-wbdict 启用失败。")))))
